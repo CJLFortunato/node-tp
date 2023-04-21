@@ -1,14 +1,14 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 237, 187);
+    background-color: rgb(255, 253, 249);
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
 header {
-    background-color: rgb(243, 122, 42);
+    background-color: rgb(255, 160, 17);
     margin: 0;
     margin-bottom: 2rem;
     width: 100%;
@@ -51,7 +51,7 @@ input {
 button {
     height: 2rem;
     margin: .7rem;
-    background-color: rgb(243, 122, 42);
+    background-color: rgb(255, 160, 17);
     color: white;
     border: none;
     padding: 1%;
@@ -63,7 +63,7 @@ ul {
 }
 
 li {
-    border-bottom: 1px solid rgb(243, 122, 42);
+    border-bottom: 1px solid rgb(255, 160, 17);
     margin: .6rem;
 }
 
@@ -74,4 +74,10 @@ li h3 {
 li p {
     margin: .2rem;
     font-style: italic;
+}
+
+.delete {
+    font-size: .875rem;
+    text-decoration: none;
+    color: hsl(2, 40%, 40%);
 }
