@@ -19,7 +19,15 @@ const users = USERS.map(user => ({
 }))
 
 const server = http.createServer((req, res) => {
+    console.log(req.url);
     switch (req.url) {
+        case '/Assets/CSS/style.css':
+            const cssFile = fs.readFileSync('Assets/CSS/style.css', 'utf8');
+            res.writeHead(200, {
+                'Content-Type': 'text/css'
+            });
+            res.write(cssFile);
+            res.end();
         case '/':
             const homeTemplate = fs.readFileSync('View/home.ejs', 'utf8');
             const homeRendered = ejs.render(homeTemplate);
@@ -54,6 +62,8 @@ const server = http.createServer((req, res) => {
                 res.end();
             });
             break;
+        case '/user/':
+            console.log(req.url);
     }
 });
 
