@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="Assets/CSS/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="#">Users</a>
+        </nav>
+    </header>
+    <h1>Utilisateurs</h1>
+    <ul>
+        <% for(let i = 0; i < users.length; i++) { %>
+        <% const user = users[i] %>
+        <li>
+            <h3><%= user.name %></h3>
+            <p><%= user.birth %></p>
+        </li>
+        <% } %>
+    </ul>
+</body>
+
+</html>
